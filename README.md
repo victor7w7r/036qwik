@@ -1,17 +1,16 @@
 # 036qwik
 
-A very simple template for Qwik with essential packages and strict TypeScript/SCSS
+A very simple template for Qwik with essential packages and strict TypeScript
 
 ## Why Typescript?
 
 Is the best programming language for web. Made with ❤️ by
 
-![Alt text](src/assets/brandwhite.png?raw=true "Title")
+![Alt text](public/brandwhite.png?raw=true "Title")
 
 ## Extra Packages
 
-- flowbite: Build websites even faster with components on top of Tailwind CSS
-- sass: For nested and optimized CSS
+- axios: Promise based HTTP client for the browser and node.js
 - tailwindcss: Utility-first CSS framework for rapidly building custom user interfaces
 
 ### Change to blank template
@@ -28,18 +27,4 @@ $ git checkout blank
 $ cd 036qwik
 $ pnpm i #Install Packages
 $ pnpm dev #Run develop
-$ pnpm build #Make production build
-$ pnpm preview #Run production build
-```
-
-## Static Site Generator (Node.js)
-
-```
-pnpm build.server
-```
-
-## Static Site Generator (Node.js)
-
-```
-pnpm build.server
 ```
