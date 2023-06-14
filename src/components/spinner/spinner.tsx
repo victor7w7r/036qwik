@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 
-const SVGPathOne: string = `
+const SVGPathOne = `
   M100 50.5908C100 78.2051 77.6142 100.591 50
   100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766
   22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766
@@ -10,7 +10,7 @@ const SVGPathOne: string = `
   9.08144 50.5908Z
 `;
 
-const SVGPathTwo: string = `
+const SVGPathTwo = `
   M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079
   33.5539C95.2932 28.8227 92.871 24.3692 89.8167
   20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422
@@ -27,9 +27,7 @@ const SVGPathTwo: string = `
 export const Spinner = component$(() =>
   <svg
     role='status'
-    class={
-      `w-8 h-8 mr-2 animate-spin text-gray-400/50 fill-white data`
-    }
+    class='w-8 h-8 mr-2 animate-spin text-gray-400/50 fill-white data'
     viewBox='0 0 100 101'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'

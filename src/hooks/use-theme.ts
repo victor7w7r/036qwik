@@ -20,7 +20,7 @@ export const useTheme = () => {
     document.body.classList.toggle('dark');
   });
 
-  const blueChange = $((): void => {
+  const changeBlue = $((): void => {
     if(theme.isDark) {
       theme.dark = 'dark:bg-sky-900';
       theme.control = 'bg-sky-700/30';
@@ -32,7 +32,7 @@ export const useTheme = () => {
     }
   });
 
-  const purpleChange = $((): void => {
+  const changePurple = $((): void => {
     if(theme.isDark) {
       theme.dark = 'dark:bg-purple-900';
       theme.control = 'bg-purple-700/30';
@@ -44,7 +44,7 @@ export const useTheme = () => {
     }
   });
 
-  const redChange = $((): void => {
+  const changeRed = $((): void => {
     if(theme.isDark) {
       theme.dark = 'dark:bg-red-900';
       theme.control = 'bg-red-700/30';
@@ -56,7 +56,7 @@ export const useTheme = () => {
     }
   });
 
-  const emeraldChange = $((): void => {
+  const changeEmerald = $((): void => {
     if(theme.isDark) {
       theme.dark = 'dark:bg-emerald-900';
       theme.control = 'bg-emerald-700/30';
@@ -74,8 +74,8 @@ export const useTheme = () => {
     white: useComputed$(() => theme.white),
     control: useComputed$(() => theme.control),
     togglePeer: useComputed$(() => theme.togglePeer),
-    toggle, blueChange, purpleChange,
-    redChange, emeraldChange
+    toggle, changeBlue, changePurple,
+    changeRed, changeEmerald
   };
 
 };

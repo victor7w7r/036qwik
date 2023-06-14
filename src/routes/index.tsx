@@ -10,8 +10,8 @@ export default component$(() => {
   const nav = useNavigate();
   const {
     control, isDark,
-    blueChange, purpleChange,
-    redChange, emeraldChange
+    changeBlue, changePurple,
+    changeRed, changeEmerald
   } = useTheme();
 
   return <div class='absolute h-screen inset-0 backdrop-blur-xl'>
@@ -55,16 +55,16 @@ export default component$(() => {
       </button>
     </div>
     <div class='flex flex-row items-center justify-center'>
-      <button class='blue-button' onClick$={blueChange}></button>
-      <button class='purple-button' onClick$={purpleChange}></button>
-      <button class='red-button' onClick$={redChange}></button>
-      <button class='emerald-button' onClick$={emeraldChange}></button>
+      <button class='blue-button' onClick$={changeBlue}></button>
+      <button class='purple-button' onClick$={changePurple}></button>
+      <button class='red-button' onClick$={changeRed}></button>
+      <button class='emerald-button' onClick$={changeEmerald}></button>
     </div>
   </div>;
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to 036qwik',
+  title: 'Home',
   meta: [
     {
       name: 'description',

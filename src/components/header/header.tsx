@@ -6,7 +6,7 @@ import { useTheme } from '~/hooks/use-theme';
 
 export const Header = component$(() => {
 
-  const {control} = useTheme();
+  const { control } = useTheme();
 
   return <div class='flex items-center justify-center'>
     <nav class={`navbar ${control.value}`}>
