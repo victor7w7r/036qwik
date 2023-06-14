@@ -6,7 +6,7 @@ A very simple template for Qwik with essential packages and strict TypeScript
 
 Is the best programming language for web. Made with ❤️ by
 
-![Alt text](public/brandwhite.png?raw=true "Title")
+![Alt text](public/img/brandwhite.png?raw=true "Title")
 
 ## Extra Packages
 
