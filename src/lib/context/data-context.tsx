@@ -1,9 +1,11 @@
 import {
-  component$, type Signal, Slot, useSignal
+  component$, type Signal,
+  Slot, useSignal
 } from '@builder.io/qwik';
 
 import {
-  useContextProvider, createContextId
+  useContextProvider,
+  createContextId
 } from '@builder.io/qwik';
 
 export const DataContext =

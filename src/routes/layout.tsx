@@ -1,9 +1,8 @@
 import { component$, Slot } from '@builder.io/qwik';
 import { routeLoader$, type RequestHandler } from '@builder.io/qwik-city';
 
-import DataContext from '../components/data-context';
-import ThemeContext from '../components/theme-context';
-import { Header } from '../components/header/header';
+import { Header } from '~/lib/components';
+import { DataProvider, ThemeProvider } from '~/lib/context';
 
 export const onGet: RequestHandler = async(
   { cacheControl }
@@ -19,12 +18,12 @@ export const useServerTimeLoader = routeLoader$(() => ({
 }));
 
 export default component$(() =>
-  <DataContext>
-    <ThemeContext>
+  <DataProvider>
+    <ThemeProvider>
       <main>
         <Slot />
         <Header />
       </main>
-    </ThemeContext>
-  </DataContext>
+    </ThemeProvider>
+  </DataProvider>
 );

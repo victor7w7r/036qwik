@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 
-import { Toggler } from '../toggler/toggler';
-import { useTheme } from '~/hooks/use-theme';
+import { Toggler } from '../';
+import { useTheme } from '~/lib/hooks';
 
 export const Header = component$(() => {
 
@@ -24,7 +24,7 @@ export const Header = component$(() => {
               </Link>
             </div>
           </div>
-          <div class='items-center mt-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
+          <div class='toggler-container'>
             <Toggler />
           </div>
         </div>

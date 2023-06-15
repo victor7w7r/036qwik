@@ -25,16 +25,16 @@ const SVGPathTwo = `
 `;
 
 export const Spinner = component$(() =>
-  <svg
-    role='status'
-    class='w-8 h-8 mr-2 animate-spin text-gray-400/50 fill-white data'
-    viewBox='0 0 100 101'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <path
-      d={SVGPathOne}
-      fill='currentColor'
-    /><path d={SVGPathTwo} fill='currentFill'/>
-  </svg>
+  <div class='flex flex-row justify-center'>
+    <svg
+      role='status'
+      class='w-8 h-8 mr-2 animate-spin text-gray-400/50 fill-white data'
+      viewBox='0 0 100 101'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path d={SVGPathOne} fill='currentColor'/>
+      <path d={SVGPathTwo} fill='currentFill'/>
+    </svg>
+  </div>
 );

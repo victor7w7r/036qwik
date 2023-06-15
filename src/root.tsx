@@ -5,9 +5,9 @@ import {
   ServiceWorkerRegister
 } from '@builder.io/qwik-city';
 
-import { RouterHead } from './components/router-head/router-head';
+import { RouterHead } from '~/lib/components';
 
-import './global.css';
+import './root.css';
 
 export default component$(() =>
   <QwikCityProvider>

@@ -1,10 +1,12 @@
 import {
   component$, useStore,
-  Slot, useVisibleTask$, useComputed$
+  Slot, useVisibleTask$,
+  useComputed$
 } from '@builder.io/qwik';
 
 import {
-  useContextProvider, createContextId
+  useContextProvider,
+  createContextId
 } from '@builder.io/qwik';
 
 type TThemeContext = {

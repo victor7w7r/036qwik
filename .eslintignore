@@ -21,6 +21,8 @@ tsc-out
 tsdoc-metadata.json
 target
 output
+tailwind.config.js
+postcss.config.js
 rollup.config.js
 build
 .cache

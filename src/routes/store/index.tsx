@@ -2,12 +2,9 @@ import { component$ } from '@builder.io/qwik';
 import { type DocumentHead } from '@builder.io/qwik-city';
 
 import {
-  floatingLabelDesign,
-  inputDesign,
-  useStorePage
-} from '~/hooks/use-storepage';
-import { useTheme } from '~/hooks/use-theme';
-import { State } from '../../components/state/state';
+  useTheme, useStorePage
+} from '~/lib/hooks';
+import { State } from '~/lib/components';
 
 export default component$(() => {
 
@@ -18,10 +15,10 @@ export default component$(() => {
 
   const { control } = useTheme();
 
-  return <div class='absolute h-screen inset-0 backdrop-blur-xl'>
-    <div class='flex items-center mt-32 lg:items-stretch lg:justify-evenly lg:h-3/6'>
-      <div class={`card-container ${control}`}>
-        <h3 class='adaptable-center-text text-base lg:text-xl font-semibold mb-4'>
+  return <div class='page-container'>
+    <div class='store-container'>
+      <div class={`card-container ${control.value}`}>
+        <h3 class='store-title'>
           Write anything in this form and send!
         </h3>
         <div class='relative z-0 w-64 mx-auto mt-6'>
@@ -29,27 +26,28 @@ export default component$(() => {
             type='text'
             value={text.value}
             name='text'
-            class={inputDesign}
+            class='peer input-design'
             placeholder=' '
             onChange$={handleChange}
           />
-          <label for='floating' class={floatingLabelDesign}>
+          <label for='floating' class='floating-design'>
             here
           </label>
-          </div>
-          <div class='flex items-center justify-center my-8 tall:my-12'>
-            <button class='standard-button' onClick$={handleSubmit}>
+        </div>
+        <div class='store-btn'>
+          <button class='standard-button'
+            onClick$={handleSubmit}>
               Send
-            </button>
-          </div>
+          </button>
+        </div>
         <State />
       </div>
-    </div>
-    <div class='flex items-center justify-center my-8 tall:my-12'>
-      <button class='standard-button'
-        onClick$={changeToHome}>
-          Go to Home
-      </button>
+      <div class='centered-button-ctn'>
+        <button class='standard-button'
+          onClick$={changeToHome}>
+            Go to Home
+        </button>
+      </div>
     </div>
   </div>;
 });
