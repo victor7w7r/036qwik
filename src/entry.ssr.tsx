@@ -1,5 +1,6 @@
 import {
-  renderToStream, type RenderToStreamOptions
+  renderToStream,
+  type RenderToStreamOptions
 } from '@builder.io/qwik/server';
 import { manifest } from '@qwik-client-manifest';
 
