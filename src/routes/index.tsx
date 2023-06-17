@@ -3,8 +3,8 @@ import {
   useNavigate, type DocumentHead
 } from '@builder.io/qwik-city';
 
-import { Call, State } from '~/lib/components';
-import { useTheme } from '~/lib/hooks';
+import { Call, State } from '~/components';
+import { useTheme } from '~/hooks';
 
 export default component$(() => {
 

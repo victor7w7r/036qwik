@@ -2,9 +2,9 @@ import {
   component$, Resource, useResource$
 } from '@builder.io/qwik';
 
-import { Spinner } from '../';
-import type { Binance } from '~/lib/models/';
-import { getBitcoin } from '~/lib/services/';
+import { Spinner } from '..';
+import type { Binance } from '~/models';
+import { getBitcoin } from '~/services';
 
 export const Call = component$(() => {
 

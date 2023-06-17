@@ -1,6 +1,6 @@
 import { useContext, useComputed$, $ } from '@builder.io/qwik';
 
-import { ThemeContext } from '~/lib/context';
+import { ThemeContext } from '~/context';
 
 export const useTheme = () => {
 

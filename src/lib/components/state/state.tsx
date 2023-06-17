@@ -1,6 +1,6 @@
 import { component$, useContext } from '@builder.io/qwik';
 
-import { DataContext } from '~/lib/context';
+import { DataContext } from '~/context';
 
 export const State = component$(() => {
 

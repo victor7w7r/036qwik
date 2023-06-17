@@ -5,7 +5,7 @@ import {
   ServiceWorkerRegister
 } from '@builder.io/qwik-city';
 
-import { RouterHead } from '~/lib/components';
+import { RouterHead } from '~/components';
 
 import './root.css';
 

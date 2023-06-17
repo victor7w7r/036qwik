@@ -4,7 +4,7 @@ import {
 } from '@builder.io/qwik';
 import { useNavigate } from '@builder.io/qwik-city';
 
-import { DataContext } from '~/lib/context/';
+import { DataContext } from '~/context/';
 
 export const useStorePage = () => {
 

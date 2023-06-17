@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 
-import { useTheme } from '~/lib/hooks';
+import { useTheme } from '~/hooks';
 
 export const Toggler = component$(() => {
 

@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 
-import { Toggler } from '../';
-import { useTheme } from '~/lib/hooks';
+import { Toggler } from '..';
+import { useTheme } from '~/hooks';
 
 export const Header = component$(() => {
 

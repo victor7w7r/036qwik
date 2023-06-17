@@ -1,10 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 import { type DocumentHead } from '@builder.io/qwik-city';
 
+import { State } from '~/components';
 import {
   useTheme, useStorePage
-} from '~/lib/hooks';
-import { State } from '~/lib/components';
+} from '~/hooks';
 
 export default component$(() => {
 
