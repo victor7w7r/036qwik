@@ -1,4 +1,7 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "eslint.validate": ["typescript", "typescriptreact"]
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "material-icon-theme.files.associations": {
+    "*.tsx": "../../icons/qwik"
+  }
 }
