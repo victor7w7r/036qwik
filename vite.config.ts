@@ -7,7 +7,10 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig(() => ({
   plugins: [
     qwikCity(),
-    qwikVite(),
+    qwikVite({
+      client: { devInput: 'src/qwik/entry.dev.tsx' },
+      ssr: { input: 'src/qwik/entry.ssr.tsx' }
+    }),
     tsconfigPaths()
   ],
   preview: {
