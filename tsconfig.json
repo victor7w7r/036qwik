@@ -18,7 +18,6 @@
     "noEmit": true,
     "types": ["node", "vite/client"],
     "paths": {
-      "~env": ["./src/env.ts"],
       "~/*": ["./src/lib/*"]
     }
   },
