@@ -39,7 +39,7 @@ export default component$(() => {
   });
 
   return <div class={
-    `h-screen transition-color
+    `min-h-screen transition-color
     duration-1000 ${white.value} ${dark.value}`
   }>
     <Slot />
