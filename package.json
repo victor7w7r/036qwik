@@ -21,8 +21,13 @@
   "devDependencies": {
     "@builder.io/qwik": "^1.2.6",
     "@builder.io/qwik-city": "^1.2.6",
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "@mui/material": "5.13.7",
     "@types/eslint": "8.40.2",
     "@types/node": "^20.4.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
     "autoprefixer": "^10.4.14",
