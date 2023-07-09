@@ -3,7 +3,7 @@ import {
 } from '@builder.io/qwik';
 
 import { Spinner } from '..';
-import type { Binance } from '~/models';
+import type { Binance } from '~/models/binance';
 import { getBitcoin } from '~/services';
 
 export const Call = component$(() => {

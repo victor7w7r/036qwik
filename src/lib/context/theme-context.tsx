@@ -5,28 +5,17 @@ import {
   useVisibleTask$
 } from '@builder.io/qwik';
 
-type TThemeContext = {
-  isDark: boolean,
-  white: string,
-  dark: string,
-  control: string,
-  togglePeer: string
-};
+import {
+  type AppTheme, whiteTheme
+} from '~/models';
 
 export const ThemeContext =
-  createContextId<TThemeContext>(
+  createContextId<AppTheme>(
     'theme-context'
   );
 
 export default component$(() => {
-
-  const theme = useStore<TThemeContext>({
-    isDark: false,
-    white: 'bg-white',
-    dark: 'dark:bg-zinc-900',
-    control: 'bg-slate-700/30',
-    togglePeer: ''
-  });
+  const theme = useStore<AppTheme>(whiteTheme);
 
   const white = useComputed$(() => theme.white);
   const dark = useComputed$(() => theme.dark);

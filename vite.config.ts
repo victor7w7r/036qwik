@@ -1,5 +1,6 @@
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import { qwikCity } from '@builder.io/qwik-city/vite';
+import { qwikReact } from '@builder.io/qwik-react/vite';
 
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -7,6 +8,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig(() => ({
   plugins: [
     qwikCity(),
+    qwikReact(),
     qwikVite({
       client: { devInput: 'src/qwik/entry.dev.tsx' },
       ssr: { input: 'src/qwik/entry.ssr.tsx' }

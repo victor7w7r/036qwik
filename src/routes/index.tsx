@@ -3,14 +3,14 @@ import {
   useNavigate, type DocumentHead
 } from '@builder.io/qwik-city';
 
-import { Call, State } from '~/components';
+import { AppPaper, Call, State } from '~/components';
 import { useTheme } from '~/hooks';
 
 export default component$(() => {
 
   const nav = useNavigate();
   const {
-    control, isDark,
+    control, isDark, materialTheme,
     changeBlue, changePurple,
     changeRed, changeEmerald
   } = useTheme();
@@ -55,6 +55,10 @@ export default component$(() => {
           <Call />
         </div>
       </div>
+      <AppPaper
+        theme={materialTheme.value}
+        client:hover
+      />
       <div class='centered-button-ctn'>
         <button class='standard-button'
           onClick$={() => nav('/store')}>

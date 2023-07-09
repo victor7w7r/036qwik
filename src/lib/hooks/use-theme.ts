@@ -1,22 +1,27 @@
 import { useContext, useComputed$, $ } from '@builder.io/qwik';
 
 import { ThemeContext } from '~/context';
+import { whiteTheme, darkTheme } from '~/models';
 
 export const useTheme = () => {
 
   const theme = useContext(ThemeContext);
 
+  const materialTheme = useComputed$(() => theme.material);
+
   const toggle = $((): void => {
     if(theme.isDark) {
       theme.isDark = false;
-      theme.dark = 'dark:bg-zinc-900';
-      theme.togglePeer = 'peer-checked:bg-white';
+      theme.white = whiteTheme.white;
+      theme.togglePeer = whiteTheme.togglePeer;
+      theme.material = whiteTheme.material;
     } else {
       theme.isDark = true;
-      theme.white = 'bg-white';
-      theme.togglePeer = 'peer-checked:bg-dark';
+      theme.dark = darkTheme.dark;
+      theme.togglePeer = darkTheme.togglePeer;
+      theme.material = darkTheme.material;
     }
-    theme.control = 'bg-slate-700/30';
+    theme.control = whiteTheme.control;
     document.body.classList.toggle('dark');
   });
 
@@ -55,7 +60,7 @@ export const useTheme = () => {
     control: useComputed$(() => theme.control),
     togglePeer: useComputed$(() => theme.togglePeer),
     toggle, changeBlue, changePurple,
-    changeRed, changeEmerald
+    changeRed, changeEmerald, materialTheme
   };
 
 };

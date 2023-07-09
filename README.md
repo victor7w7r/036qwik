@@ -11,6 +11,7 @@ Is the best programming language for web. Made with ❤️ by
 ## Extra Packages
 
 - axios: Promise based HTTP client for the browser and node.js
+- react: React islands for Qwik
 - tailwindcss: Utility-first CSS framework for rapidly building custom user interfaces
 
 ### Change to blank template
