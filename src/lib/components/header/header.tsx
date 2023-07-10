@@ -1,11 +1,14 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useStyles$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
+
+import styles from './header.css?inline';
 
 import { Toggler } from '..';
 import { useTheme } from '~/hooks';
 
 export const Header = component$(() => {
 
+  useStyles$(styles);
   const { control } = useTheme();
 
   return <div class='flex items-center justify-center'>

@@ -1,9 +1,12 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useStyles$ } from '@builder.io/qwik';
 
 import { useTheme } from '~/hooks';
 
+import styles from './toggler.css?inline';
+
 export const Toggler = component$(() => {
 
+  useStyles$(styles);
   const {
     toggle, togglePeer, isDark
   } = useTheme();

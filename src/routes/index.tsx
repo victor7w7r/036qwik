@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useStyles$ } from '@builder.io/qwik';
 import {
   useNavigate, type DocumentHead
 } from '@builder.io/qwik-city';
@@ -6,9 +6,12 @@ import {
 import { AppPaper, Call, State } from '~/components';
 import { useTheme } from '~/hooks';
 
+import styles from '~/styles/home.css?inline';
+
 export default component$(() => {
 
   const nav = useNavigate();
+  useStyles$(styles);
   const {
     control, isDark, materialTheme,
     changeBlue, changePurple,

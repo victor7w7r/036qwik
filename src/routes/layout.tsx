@@ -4,6 +4,8 @@ import { routeLoader$, type RequestHandler } from '@builder.io/qwik-city';
 import { Header } from '~/components';
 import { DataProvider, ThemeProvider } from '~/context';
 
+import '~/styles/global.css';
+
 export const onGet: RequestHandler = async(
   { cacheControl }
 ) => {
