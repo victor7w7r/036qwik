@@ -4,16 +4,14 @@ import {
   useContextProvider, useSignal
 } from '@builder.io/qwik';
 
-export const DataContext =
-  createContextId<Signal<string | undefined>>(
+export const DataContext
+  = createContextId<Signal<string | undefined>>(
     'data-context'
   );
 
 export default component$(() => {
 
-  const dataState = useSignal<string | undefined>(
-    undefined
-  );
+  const dataState = useSignal<string | undefined>();
 
   useContextProvider(DataContext, dataState);
 

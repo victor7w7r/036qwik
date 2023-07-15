@@ -1,5 +1,5 @@
-import { axiosClient, timeout } from '~/config';
-import { errorBinance, type Binance } from '~/models/binance';
+import { axiosClient, timeout } from '~/common/config';
+import { errorBinance, type Binance } from '~/home/models';
 
 export const getBitcoin = async(
 ): Promise<Binance> => {
@@ -10,7 +10,7 @@ export const getBitcoin = async(
     );
     return res
       .data
-      .find(curr => curr.symbol === 'BTCUSDT')
+      .find((curr) => curr.symbol === 'BTCUSDT')
     ?? errorBinance;
   } catch (e) {
     return errorBinance;

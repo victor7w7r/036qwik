@@ -10,14 +10,17 @@ import {
 } from '@mui/material';
 
 export const AppPaper = qwikify$((
-  { theme }: {theme: ThemeOptions}
+  { theme }: { theme: ThemeOptions }
 ) => {
 
   const [count, setCount] = useState(0);
 
   return (
     <ThemeProvider theme={createTheme(theme)}>
-      <Paper className='my-5 mx-auto max-w-xl py-4 px-8 flex flex-row justify-between' variant='elevation'>
+      <Paper
+        className='mt-5 mx-auto max-w-xl py-2 px-8 flex flex-row justify-between'
+        variant='elevation'
+      >
         <Typography className='mt-2' variant='subtitle2'>
           MUI React Counter
         </Typography>

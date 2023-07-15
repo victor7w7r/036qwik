@@ -7,14 +7,15 @@ import {
 
 import {
   type AppTheme, whiteTheme
-} from '~/models';
+} from '~/common/models';
 
-export const ThemeContext =
-  createContextId<AppTheme>(
+export const ThemeContext
+  = createContextId<AppTheme>(
     'theme-context'
   );
 
 export default component$(() => {
+
   const theme = useStore<AppTheme>(whiteTheme);
 
   const white = useComputed$(() => theme.white);
@@ -23,8 +24,8 @@ export default component$(() => {
   useContextProvider(ThemeContext, theme);
 
   useVisibleTask$(() => {
-    theme.isDark =
-      document.body.classList.contains('dark');
+    theme.isDark
+      = document.body.classList.contains('dark');
   });
 
   return <div class={

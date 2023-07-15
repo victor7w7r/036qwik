@@ -1,9 +1,9 @@
-import type { ThemeOptions } from "@mui/material";
+import type { ThemeOptions } from '@mui/material';
 
 type CommonElements = {
   white: string,
   dark: string,
-  control: string,
+  control: string
 };
 
 export type AppTheme = CommonElements & {
@@ -15,7 +15,7 @@ export type AppTheme = CommonElements & {
 const stdElements: CommonElements = {
   white: 'bg-white',
   dark: 'dark:bg-zinc-900',
-  control: 'bg-slate-700/30',
+  control: 'bg-slate-700/30'
 };
 
 export const whiteTheme: AppTheme = {

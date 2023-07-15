@@ -1,12 +1,12 @@
 import { component$, Slot } from '@builder.io/qwik';
 import { routeLoader$, type RequestHandler } from '@builder.io/qwik-city';
 
-import { Header } from '~/components';
-import { DataProvider, ThemeProvider } from '~/context';
+import { Header } from '~/common/components';
+import { DataProvider, ThemeProvider } from '~/common/context';
 
-import '~/styles/global.css';
+import '~/common/styles/global.css';
 
-export const onGet: RequestHandler = async(
+export const onGet: RequestHandler = (
   { cacheControl }
 ) => {
   cacheControl({
@@ -15,8 +15,8 @@ export const onGet: RequestHandler = async(
   });
 };
 
-export const useServerTimeLoader =
-  routeLoader$(() => ({
+export const useServerTimeLoader
+  = routeLoader$(() => ({
     date: new Date().toISOString()
   }));
 

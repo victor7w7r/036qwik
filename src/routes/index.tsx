@@ -3,20 +3,22 @@ import {
   useNavigate, type DocumentHead
 } from '@builder.io/qwik-city';
 
-import { AppPaper, Call, State } from '~/components';
-import { useTheme } from '~/hooks';
+import { State } from '~/common/components';
+import { useTheme } from '~/common/hooks';
+import { AppPaper, Call } from '~/home/components';
 
-import styles from '~/styles/home.css?inline';
+import styles from '~/home/styles/home.css?inline';
 
 export default component$(() => {
 
   const nav = useNavigate();
-  useStyles$(styles);
   const {
     control, isDark, materialTheme,
     changeBlue, changePurple,
     changeRed, changeEmerald
   } = useTheme();
+
+  useStyles$(styles);
 
   return <div class='page-container'>
     <div class='home-container'>
@@ -29,9 +31,9 @@ export default component$(() => {
             ? '/img/brandwhite.png'
             : '/img/brand.png'
           }
-            class='scale-75 lg:scale-100'
-            width={400} height={200}
-            alt=''
+          class='scale-75 lg:scale-100'
+          width={400} height={200}
+          alt=''
           />
           <h3 class='adaptable-center-text-base font-semibold mb-4'>
             Happy Hacking! with Typescript?
@@ -40,12 +42,12 @@ export default component$(() => {
             Roboto Font works with
           </p>
           <img src={ isDark.value
-              ? '/img/tailwindwhite.png'
-              : '/img/tailwind.png'
-            }
-            class='scale-50 tall:scale-75 lg:scale-75'
-            width={400} height={200}
-            alt=''
+            ? '/img/tailwindwhite.png'
+            : '/img/tailwind.png'
+          }
+          class='scale-50 tall:scale-75 lg:scale-75'
+          width={400} height={200}
+          alt=''
           />
         </div>
         <div class={
@@ -68,7 +70,7 @@ export default component$(() => {
             Go to store
         </button>
       </div>
-      <div class='flex flex-row gap-7 mt-3 w-fit mx-auto'>
+      <div class='flex flex-row gap-7 -mt-1 w-fit mx-auto'>
         <button class='blue-button' onClick$={changeBlue}></button>
         <button class='purple-button' onClick$={changePurple}></button>
         <button class='red-button' onClick$={changeRed}></button>

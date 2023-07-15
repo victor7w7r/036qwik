@@ -1,22 +1,21 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
-import { type DocumentHead } from '@builder.io/qwik-city';
+import type { DocumentHead } from '@builder.io/qwik-city';
 
-import { State } from '~/components';
-import {
-  useTheme, useStorePage
-} from '~/hooks';
+import { State } from '~/common/components';
+import { useTheme } from '~/common/hooks';
+import { useStorePage } from '~/store/hooks';
 
-import styles from '~/styles/store.css?inline';
+import styles from '~/store/styles/store.css?inline';
 
 export default component$(() => {
 
-  useStyles$(styles);
   const {
     handleSubmit, handleChange,
     changeToHome, text
   } = useStorePage();
-
   const { control } = useTheme();
+
+  useStyles$(styles);
 
   return <div class='page-container'>
     <div class='store-container'>

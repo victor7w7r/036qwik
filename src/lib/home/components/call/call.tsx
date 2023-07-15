@@ -2,9 +2,9 @@ import {
   component$, Resource, useResource$
 } from '@builder.io/qwik';
 
-import { Spinner } from '..';
-import type { Binance } from '~/models/binance';
-import { getBitcoin } from '~/services';
+import { Spinner } from '~/home/components';
+import type { Binance } from '~/home/models';
+import { getBitcoin } from '~/home/services';
 
 export const Call = component$(() => {
 
@@ -16,8 +16,8 @@ export const Call = component$(() => {
     value={btcResource}
     onPending={() => <Spinner />}
     onResolved={bin => <>
-      <p class='adaptable-call'>Symbol: {bin?.symbol}</p>
-      <p class='adaptable-call'>Price: {bin?.askPrice}</p>
+      <p class='adaptable-call'>Symbol: {bin.symbol}</p>
+      <p class='adaptable-call'>Price: {bin.askPrice}</p>
     </>}
   />;
 

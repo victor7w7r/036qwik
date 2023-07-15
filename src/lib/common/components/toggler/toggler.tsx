@@ -1,17 +1,16 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
 
-import { useTheme } from '~/hooks';
+import { useTheme } from '~/common/hooks';
 
 import styles from './toggler.css?inline';
 
 export const Toggler = component$(() => {
 
-  useStyles$(styles);
   const {
-    toggle, togglePeer, isDark
+    isDark, toggle, togglePeer
   } = useTheme();
 
-  const toggleDesign = `${togglePeer.value} peer toggle-design`;
+  useStyles$(styles);
 
   return <div class='relative'>
     <div class='flex items-center justify-center w-full'>
@@ -27,7 +26,9 @@ export const Toggler = component$(() => {
           checked={isDark.value}
           onChange$={toggle}
         />
-        <div class={toggleDesign}></div>
+        <div
+          class={`${togglePeer.value} peer toggle-design`}>
+        </div>
         <span class='toggle-title'>
           Dark Mode
         </span>
