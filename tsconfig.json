@@ -4,6 +4,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
     "lib": [
@@ -12,7 +13,6 @@
     ],
     "module": "ESNext",
     "moduleResolution": "node",
-    "isolatedModules": true,
     "noEmit": true,
     "outDir": "tmp",
     "paths": { "~/*": ["./src/lib/*"] },
@@ -20,7 +20,7 @@
     "skipLibCheck": true,
     "target": "ES2020",
     "types": ["node", "vite/client"],
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": true
   },
   "files": ["./.eslintrc.cjs"],
   "include": ["src", "./*.d.ts"]
