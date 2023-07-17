@@ -131,7 +131,6 @@ module.exports = {
     'react/jsx-curly-spacing': ['warn', 'never', { 'allowMultiline': true }],
     'react/jsx-equals-spacing': ['warn', 'never'],
     'react/jsx-fragments': ['warn', 'syntax'],
-    'react/jsx-handler-names': 'warn',
     'react/jsx-indent': ['warn', 2, { 'checkAttributes': true }],
     'react/jsx-indent-props': ['warn', 2],
     'react/jsx-no-script-url': 'error',
