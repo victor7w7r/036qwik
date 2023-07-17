@@ -43,8 +43,13 @@ module.exports = {
     }],
     '@typescript-eslint/no-inferrable-types': 'warn',
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    '@typescript-eslint/no-misused-promises': ['error', {
+      'checksVoidReturn': false
+    }],
     '@typescript-eslint/no-require-imports': 'error',
-    '@typescript-eslint/no-unused-expressions': 'error',
+    '@typescript-eslint/no-unused-expressions': ['error', {
+      'allowTernary': true
+    }],
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
     '@typescript-eslint/prefer-readonly': 'warn',
@@ -86,7 +91,6 @@ module.exports = {
     'no-loop-func': 'error',
     'no-mixed-operators': 'warn',
     'no-multi-spaces': 'warn',
-    'no-negated-condition': 'warn',
     'no-new-func': 'error',
     'no-return-await': 'warn',
     'no-script-url': 'error',
@@ -111,7 +115,10 @@ module.exports = {
     }],
     'operator-assignment': ['warn', 'always'],
     'operator-linebreak': ['warn', 'after', {
-      'overrides': { '?': 'before', ':': 'before' }
+      'overrides': {
+        '?': 'before', ':': 'before',
+        '&&': 'before', '||': 'before'
+      }
     }],
     'prefer-arrow-callback': 'error',
     'prefer-const': 'warn',
