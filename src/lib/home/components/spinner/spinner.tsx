@@ -33,8 +33,8 @@ export const Spinner = component$(() =>
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <path d={SVGPathOne} fill='currentColor'/>
-      <path d={SVGPathTwo} fill='currentFill'/>
+      <path d={SVGPathOne} fill='currentColor' />
+      <path d={SVGPathTwo} fill='currentFill' />
     </svg>
   </div>
 );

@@ -15,10 +15,18 @@ export const Call = component$(() => {
   return <Resource
     value={btcResource}
     onPending={() => <Spinner />}
-    onResolved={bin => <>
-      <p class='adaptable-call'>Symbol: {bin.symbol}</p>
-      <p class='adaptable-call'>Price: {bin.askPrice}</p>
-    </>}
+    onResolved={bin => (
+      <>
+        <p class='adaptable-call'>
+          Symbol:
+          {bin.symbol}
+        </p>
+        <p class='adaptable-call'>
+          Price:
+          {bin.askPrice}
+        </p>
+      </>
+    )}
   />;
 
 });

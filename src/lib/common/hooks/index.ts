@@ -10,7 +10,7 @@ export const useTheme = () => {
   const materialTheme = useComputed$(() => theme.material);
 
   const toggle = $((): void => {
-    if (theme.isDark) {
+    if(theme.isDark) {
       theme.isDark = false;
       theme.white = whiteTheme.white;
       theme.togglePeer = whiteTheme.togglePeer;
@@ -26,7 +26,7 @@ export const useTheme = () => {
   });
 
   const changeSelector = $((selector: string): void => {
-    if (theme.isDark) {
+    if(theme.isDark) {
       theme.dark = `dark:bg-${selector}-900`;
       theme.control = `bg-${selector}-700/30`;
       theme.togglePeer = `peer-checked:bg-${selector}-500`;

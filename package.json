@@ -35,6 +35,7 @@
     "axios": "^1.4.0",
     "eslint": "8.45.0",
     "eslint-plugin-qwik": "^1.2.6",
+    "eslint-plugin-react": "^7.32.2",
     "postcss": "^8.4.26",
     "react": "18.2.0",
     "react-dom": "18.2.0",

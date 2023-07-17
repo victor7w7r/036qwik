@@ -15,8 +15,8 @@ export const onGet: RequestHandler = (
   });
 };
 
-export const useServerTimeLoader
-  = routeLoader$(() => ({
+export const useServerTimeLoader =
+  routeLoader$(() => ({
     date: new Date().toISOString()
   }));
 

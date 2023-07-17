@@ -9,8 +9,8 @@ import {
   type AppTheme, whiteTheme
 } from '~/common/models';
 
-export const ThemeContext
-  = createContextId<AppTheme>(
+export const ThemeContext =
+  createContextId<AppTheme>(
     'theme-context'
   );
 
@@ -24,14 +24,17 @@ export default component$(() => {
   useContextProvider(ThemeContext, theme);
 
   useVisibleTask$(() => {
-    theme.isDark
-      = document.body.classList.contains('dark');
+    theme.isDark =
+      document.body.classList.contains('dark');
   });
 
-  return <div class={
-    `min-h-screen transition-color
-    duration-1000 ${white.value} ${dark.value}`
-  }>
-    <Slot />
-  </div>;
+  return (
+    <div class={
+      `min-h-screen transition-color
+      duration-1000 ${white.value} ${dark.value}`
+    }
+    >
+      <Slot />
+    </div>
+  );
 });

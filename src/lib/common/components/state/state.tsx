@@ -7,9 +7,16 @@ export const State = component$(() => {
   const dataState = useContext(DataContext);
 
   return typeof dataState.value === 'undefined'
-    ? <p class='adaptable-xl'>Store State: Not yet.</p>
-    : <p class='adaptable-xl'>
+    ? (
+      <p class='adaptable-xl'>
+        Store State: Not yet.
+      </p>
+    ) : (
+      <p class='adaptable-xl'>
         Store State: Yes, you write
-      <b> {dataState.value}</b>
-    </p>;
+        <b>
+          {dataState.value}
+        </b>
+      </p>
+    );
 });

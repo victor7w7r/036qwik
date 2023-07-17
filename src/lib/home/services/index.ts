@@ -10,8 +10,7 @@ export const getBitcoin = async(
     );
     return res
       .data
-      .find((curr) => curr.symbol === 'BTCUSDT')
-    ?? errorBinance;
+      .find((curr) => curr.symbol === 'BTCUSDT') ?? errorBinance;
   } catch (e) {
     return errorBinance;
   }
