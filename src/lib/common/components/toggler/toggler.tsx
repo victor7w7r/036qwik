@@ -5,35 +5,27 @@ import { useTheme } from '~/common/hooks';
 import styles from './toggler.css?inline';
 
 export const Toggler = component$(() => {
-
-  const {
-    isDark, toggle, togglePeer
-  } = useTheme();
+  const { isDark, toggle, togglePeer } = useTheme();
 
   useStyles$(styles);
 
   return (
     <div class='relative'>
-      <div class='flex items-center justify-center w-full'>
+      <div class='flex w-full items-center justify-center'>
         <label
           for='checked-toggle'
-          class='inline-flex items-center mb-4 cursor-pointer'
+          class='mb-4 inline-flex cursor-pointer items-center'
         >
           <input
             type='checkbox'
             value=''
             id='checked-toggle'
-            class='sr-only peer'
+            class='peer sr-only'
             checked={isDark.value}
             onChange$={toggle}
           />
-          <div
-            class={`${togglePeer.value} peer toggle-design`}
-          >
-          </div>
-          <span class='toggle-title'>
-            Dark Mode
-          </span>
+          <div class={`${togglePeer.value} toggle-design peer`}></div>
+          <span class='toggle-title'>Dark Mode</span>
         </label>
       </div>
     </div>

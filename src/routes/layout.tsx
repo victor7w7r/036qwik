@@ -6,21 +6,18 @@ import { DataProvider, ThemeProvider } from '~/common/context';
 
 import '~/common/styles/global.css';
 
-export const onGet: RequestHandler = (
-  { cacheControl }
-) => {
+export const onGet: RequestHandler = ({ cacheControl }) => {
   cacheControl({
     staleWhileRevalidate: 60 * 60 * 24 * 7,
     maxAge: 5
   });
 };
 
-export const useServerTimeLoader =
-  routeLoader$(() => ({
-    date: new Date().toISOString()
-  }));
+export const useServerTimeLoader = routeLoader$(() => ({
+  date: new Date().toISOString()
+}));
 
-export default component$(() =>
+export default component$(() => (
   <DataProvider>
     <ThemeProvider>
       <main>
@@ -29,4 +26,4 @@ export default component$(() =>
       </main>
     </ThemeProvider>
   </DataProvider>
-);
+));

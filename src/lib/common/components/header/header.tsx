@@ -7,7 +7,6 @@ import { useTheme } from '~/common/hooks';
 import styles from './header.css?inline';
 
 export const Header = component$(() => {
-
   const { control } = useTheme();
 
   useStyles$(styles);
@@ -15,16 +14,12 @@ export const Header = component$(() => {
   return (
     <div class='flex items-center justify-center'>
       <nav class={`navbar ${control.value}`}>
-        <div class='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+        <div class='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div class='flex items-center justify-between'>
-            <div class='flex-1 flex items-stretch justify-start'>
-              <div class='flex-shrink-0 flex items-center'>
-                <img
-                  src='/img/logo.png'
-                  width={30} height={30}
-                  alt=''
-                />
-                <Link href='/' class='ml-4 font-medium adaptable-text'>
+            <div class='flex flex-1 items-stretch justify-start'>
+              <div class='flex shrink-0 items-center'>
+                <img src='/img/logo.png' width={30} height={30} alt='' />
+                <Link href='/' class='adaptable-text ml-4 font-medium'>
                   Qwik Template
                 </Link>
               </div>

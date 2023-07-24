@@ -1,15 +1,15 @@
 import type { ThemeOptions } from '@mui/material';
 
 type CommonElements = {
-  white: string,
-  dark: string,
-  control: string
+  white: string;
+  dark: string;
+  control: string;
 };
 
 export type AppTheme = CommonElements & {
-  isDark: boolean,
-  togglePeer: string,
-  material: ThemeOptions
+  isDark: boolean;
+  togglePeer: string;
+  material: ThemeOptions;
 };
 
 const stdElements: CommonElements = {

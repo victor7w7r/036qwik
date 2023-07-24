@@ -9,7 +9,7 @@ import { RouterHead } from '~/common/components';
 
 import './root.css';
 
-export default component$(() =>
+export default component$(() => (
   <QwikCityProvider>
     <head>
       <meta charSet='utf-8' />
@@ -21,4 +21,4 @@ export default component$(() =>
       <ServiceWorkerRegister />
     </body>
   </QwikCityProvider>
-);
+));

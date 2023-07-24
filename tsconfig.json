@@ -1,5 +1,4 @@
 {
-  "extends": "./tsconfig.lint.json",
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
@@ -7,10 +6,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
-    "lib": [
-      "ES2020", "DOM",
-      "WebWorker", "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "WebWorker", "DOM.Iterable"],
+    "incremental": true,
     "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -19,9 +16,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "target": "ES2020",
-    "types": ["node", "vite/client"],
-    "verbatimModuleSyntax": true
+    "types": ["node", "vite/client"]
   },
-  "files": ["./.eslintrc.cjs"],
-  "include": ["src", "./*.d.ts"]
+  "extends": "./tsconfig.app.json"
 }
