@@ -10,6 +10,7 @@ export default extendConfig(baseConfig, () => ({
       input: ['@qwik-city-plan']
     }
   },
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   plugins: [
     staticAdapter({
       origin: 'https://yoursite.qwik.dev'

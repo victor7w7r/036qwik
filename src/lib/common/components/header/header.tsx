@@ -6,6 +6,8 @@ import { useTheme } from '~/common/hooks';
 
 import styles from './header.css?inline';
 
+import ImgLogo from '~/assets/logo.png?jsx';
+
 export const Header = component$(() => {
   const { control } = useTheme();
 
@@ -18,7 +20,9 @@ export const Header = component$(() => {
           <div class='flex items-center justify-between'>
             <div class='flex flex-1 items-stretch justify-start'>
               <div class='flex shrink-0 items-center'>
-                <img src='/img/logo.png' width={30} height={30} alt='' />
+                <div class='h-10 w-10'>
+                  <ImgLogo />
+                </div>
                 <Link href='/' class='adaptable-text ml-4 font-medium'>
                   Qwik Template
                 </Link>
