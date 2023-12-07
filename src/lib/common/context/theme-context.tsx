@@ -20,6 +20,7 @@ export default component$(() => {
 
   useContextProvider(ThemeContext, theme);
 
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     theme.isDark = document.body.classList.contains('dark');
   });

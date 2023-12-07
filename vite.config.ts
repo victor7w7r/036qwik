@@ -11,8 +11,8 @@ export default defineConfig(() => ({
     qwikCity(),
     qwikReact(),
     qwikVite({
-      client: { devInput: 'src/qwik/entry.dev.tsx' },
-      ssr: { input: 'src/qwik/entry.ssr.tsx' }
+      client: { devInput: 'src/core/qwik/entry.dev.tsx' },
+      ssr: { input: 'src/core/qwik/entry.ssr.tsx' }
     }),
     tsconfigPaths()
   ],

@@ -6,7 +6,7 @@ import { useTheme } from '~/common/hooks';
 
 import styles from './header.css?inline';
 
-import ImgLogo from '~/assets/logo.png?jsx';
+import ImgLogo from '~assets/logo.png?jsx';
 
 export const Header = component$(() => {
   const { control } = useTheme();

@@ -12,7 +12,11 @@
     "moduleResolution": "node",
     "noEmit": true,
     "outDir": "tmp",
-    "paths": { "~/*": ["./src/lib/*"] },
+    "paths": {
+      "~/*": ["./src/lib/*"],
+      "~assets/*": ["./src/assets/*"],
+      "~core/*": ["./src/core/*"],
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "target": "ES2020",
