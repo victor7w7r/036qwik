@@ -15,7 +15,7 @@
     "paths": {
       "~/*": ["./src/lib/*"],
       "~assets/*": ["./src/assets/*"],
-      "~core/*": ["./src/core/*"],
+      "~core/*": ["./src/core/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
