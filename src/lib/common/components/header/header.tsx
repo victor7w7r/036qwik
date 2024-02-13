@@ -1,17 +1,17 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
+import { component$, useStyles$ } from '@builder.io/qwik'
+import { Link } from '@builder.io/qwik-city'
 
-import { Toggler } from '..';
-import { useTheme } from '~/common/hooks';
+import { Toggler } from '..'
+import { useTheme } from '~/common/hooks'
 
-import styles from './header.css?inline';
+import styles from './header.css?inline'
 
-import ImgLogo from '~assets/logo.png?jsx';
+import ImgLogo from '~assets/logo.png?jsx'
 
 export const Header = component$(() => {
-  const { control } = useTheme();
+  const { control } = useTheme()
 
-  useStyles$(styles);
+  useStyles$(styles)
 
   return (
     <div class='flex items-center justify-center'>
@@ -35,5 +35,5 @@ export const Header = component$(() => {
         </div>
       </nav>
     </div>
-  );
-});
+  )
+})

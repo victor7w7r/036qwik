@@ -1,7 +1,7 @@
 /** @jsxImportSource react */
-import { qwikify$ } from '@builder.io/qwik-react';
+import { qwikify$ } from '@builder.io/qwik-react'
 
-import { useState } from 'react';
+import { useState } from 'react'
 
 import {
   createTheme,
@@ -10,10 +10,10 @@ import {
   ThemeProvider,
   type ThemeOptions,
   Button
-} from '@mui/material';
+} from '@mui/material'
 
 export const AppPaper = qwikify$(({ theme }: { theme: ThemeOptions }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <ThemeProvider theme={createTheme(theme)}>
@@ -27,5 +27,5 @@ export const AppPaper = qwikify$(({ theme }: { theme: ThemeOptions }) => {
         <Button onClick={() => setCount(count + 1)}>{count}</Button>
       </Paper>
     </ThemeProvider>
-  );
-});
+  )
+})

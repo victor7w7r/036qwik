@@ -5,15 +5,15 @@ import {
   Slot,
   useContextProvider,
   useSignal
-} from '@builder.io/qwik';
+} from '@builder.io/qwik'
 
 export const DataContext =
-  createContextId<Signal<string | undefined>>('data-context');
+  createContextId<Signal<string | undefined>>('data-context')
 
 export default component$(() => {
-  const dataState = useSignal<string | undefined>();
+  const dataState = useSignal<string | undefined>()
 
-  useContextProvider(DataContext, dataState);
+  useContextProvider(DataContext, dataState)
 
-  return <Slot />;
-});
+  return <Slot />
+})

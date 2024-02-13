@@ -1,17 +1,17 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { component$, useStyles$ } from '@builder.io/qwik'
+import type { DocumentHead } from '@builder.io/qwik-city'
 
-import { State } from '~/common/components';
-import { useTheme } from '~/common/hooks';
-import { useStorePage } from '~/store/hooks';
+import { State } from '~/common/components'
+import { useTheme } from '~/common/hooks'
+import { useStorePage } from '~/store/hooks'
 
-import styles from '~/store/styles/store.css?inline';
+import styles from '~/store/styles/store.css?inline'
 
 export default component$(() => {
-  const { handleSubmit, handleChange, changeToHome, text } = useStorePage();
-  const { control } = useTheme();
+  const { handleSubmit, handleChange, changeToHome, text } = useStorePage()
+  const { control } = useTheme()
 
-  useStyles$(styles);
+  useStyles$(styles)
 
   return (
     <div class='page-container'>
@@ -49,8 +49,8 @@ export default component$(() => {
         </div>
       </div>
     </div>
-  );
-});
+  )
+})
 
 export const head: DocumentHead = {
   title: 'Store',
@@ -60,4 +60,4 @@ export const head: DocumentHead = {
       content: 'the description'
     }
   ]
-};
+}

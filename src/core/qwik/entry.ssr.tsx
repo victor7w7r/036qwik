@@ -1,10 +1,10 @@
 import {
   renderToStream,
   type RenderToStreamOptions
-} from '@builder.io/qwik/server';
-import { manifest } from '@qwik-client-manifest';
+} from '@builder.io/qwik/server'
+import { manifest } from '@qwik-client-manifest'
 
-import Root from '../../root';
+import Root from '../../root'
 
 export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
@@ -14,5 +14,5 @@ export default function (opts: RenderToStreamOptions) {
       lang: 'en-us',
       ...opts.containerAttributes
     }
-  });
+  })
 }

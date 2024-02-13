@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "material-icon-theme.activeIconPack": "qwik",
   "emmet.includeLanguages": {
     "typescriptreact": "html"

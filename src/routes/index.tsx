@@ -1,14 +1,14 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { useNavigate, type DocumentHead } from '@builder.io/qwik-city';
+import { component$, useStyles$ } from '@builder.io/qwik'
+import { useNavigate, type DocumentHead } from '@builder.io/qwik-city'
 
-import { State } from '~/common/components';
-import { useTheme } from '~/common/hooks';
-import { AppPaper, Call } from '~/home/components';
+import { State } from '~/common/components'
+import { useTheme } from '~/common/hooks'
+import { AppPaper, Call } from '~/home/components'
 
-import styles from '~/home/styles/home.css?inline';
+import styles from '~/home/styles/home.css?inline'
 
 export default component$(() => {
-  const nav = useNavigate();
+  const nav = useNavigate()
   const {
     control,
     isDark,
@@ -17,9 +17,9 @@ export default component$(() => {
     changePurple,
     changeRed,
     changeEmerald
-  } = useTheme();
+  } = useTheme()
 
-  useStyles$(styles);
+  useStyles$(styles)
 
   return (
     <div class='page-container'>
@@ -90,8 +90,8 @@ export default component$(() => {
         </div>
       </div>
     </div>
-  );
-});
+  )
+})
 
 export const head: DocumentHead = {
   title: 'Home',
@@ -101,4 +101,4 @@ export const head: DocumentHead = {
       content: 'the description'
     }
   ]
-};
+}

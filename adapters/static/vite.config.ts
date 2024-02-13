@@ -1,7 +1,7 @@
-import { staticAdapter } from '@builder.io/qwik-city/adapters/static/vite';
-import { extendConfig } from '@builder.io/qwik-city/vite';
+import { staticAdapter } from '@builder.io/qwik-city/adapters/static/vite'
+import { extendConfig } from '@builder.io/qwik-city/vite'
 
-import baseConfig from '../../vite.config';
+import baseConfig from '../../vite.config'
 
 export default extendConfig(baseConfig, () => ({
   build: {
@@ -16,4 +16,4 @@ export default extendConfig(baseConfig, () => ({
       origin: 'https://yoursite.qwik.dev'
     })
   ]
-}));
+}))

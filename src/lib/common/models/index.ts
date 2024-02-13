@@ -1,22 +1,22 @@
-import type { ThemeOptions } from '@mui/material';
+import type { ThemeOptions } from '@mui/material'
 
 type CommonElements = {
-  white: string;
-  dark: string;
-  control: string;
-};
+  white: string
+  dark: string
+  control: string
+}
 
 export type AppTheme = CommonElements & {
-  isDark: boolean;
-  togglePeer: string;
-  material: ThemeOptions;
-};
+  isDark: boolean
+  togglePeer: string
+  material: ThemeOptions
+}
 
 const stdElements: CommonElements = {
   white: 'bg-white',
   dark: 'dark:bg-zinc-900',
   control: 'bg-slate-700/30'
-};
+}
 
 export const whiteTheme: AppTheme = {
   ...stdElements,
@@ -37,7 +37,7 @@ export const whiteTheme: AppTheme = {
       }
     }
   }
-};
+}
 
 export const darkTheme: AppTheme = {
   ...stdElements,
@@ -57,4 +57,4 @@ export const darkTheme: AppTheme = {
       }
     }
   }
-};
+}

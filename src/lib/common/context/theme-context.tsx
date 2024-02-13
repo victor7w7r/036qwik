@@ -6,24 +6,24 @@ import {
   useComputed$,
   useStore,
   useVisibleTask$
-} from '@builder.io/qwik';
+} from '@builder.io/qwik'
 
-import { type AppTheme, whiteTheme } from '~/common/models';
+import { type AppTheme, whiteTheme } from '~/common/models'
 
-export const ThemeContext = createContextId<AppTheme>('theme-context');
+export const ThemeContext = createContextId<AppTheme>('theme-context')
 
 export default component$(() => {
-  const theme = useStore<AppTheme>(whiteTheme);
+  const theme = useStore<AppTheme>(whiteTheme)
 
-  const white = useComputed$(() => theme.white);
-  const dark = useComputed$(() => theme.dark);
+  const white = useComputed$(() => theme.white)
+  const dark = useComputed$(() => theme.dark)
 
-  useContextProvider(ThemeContext, theme);
+  useContextProvider(ThemeContext, theme)
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
-    theme.isDark = document.body.classList.contains('dark');
-  });
+    theme.isDark = document.body.classList.contains('dark')
+  })
 
   return (
     <div
@@ -32,5 +32,5 @@ export default component$(() => {
     >
       <Slot />
     </div>
-  );
-});
+  )
+})

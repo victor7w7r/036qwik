@@ -1,48 +1,49 @@
-import { useContext, useComputed$, $ } from '@builder.io/qwik';
+import { useContext, useComputed$, $ } from '@builder.io/qwik'
+import 'scope-extensions-js'
 
-import { ThemeContext } from '~/common/context';
-import { whiteTheme, darkTheme } from '~/common/models';
+import { ThemeContext } from '~/common/context'
+import { whiteTheme, darkTheme } from '~/common/models'
 
 export const useTheme = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext)
 
-  const materialTheme = useComputed$(() => theme.material);
+  const materialTheme = useComputed$(() => theme.material)
 
-  const toggle = $((): void => {
+  const toggle = $(() => {
     if (theme.isDark) {
-      theme.isDark = false;
-      theme.white = whiteTheme.white;
-      theme.togglePeer = whiteTheme.togglePeer;
-      theme.material = whiteTheme.material;
+      theme.isDark = false
+      theme.white = whiteTheme.white
+      theme.togglePeer = whiteTheme.togglePeer
+      theme.material = whiteTheme.material
     } else {
-      theme.isDark = true;
-      theme.dark = darkTheme.dark;
-      theme.togglePeer = darkTheme.togglePeer;
-      theme.material = darkTheme.material;
+      theme.isDark = true
+      theme.dark = darkTheme.dark
+      theme.togglePeer = darkTheme.togglePeer
+      theme.material = darkTheme.material
     }
-    theme.control = whiteTheme.control;
-    document.body.classList.toggle('dark');
-  });
+    theme.control = whiteTheme.control
+    document.body.classList.toggle('dark')
+  })
 
-  const changeSelector = $((selector: string): void => {
+  const changeSelector = $((selector: string) => {
     if (theme.isDark) {
-      theme.dark = `dark:bg-${selector}-900`;
-      theme.control = `bg-${selector}-700/30`;
-      theme.togglePeer = `peer-checked:bg-${selector}-500`;
+      theme.dark = `dark:bg-${selector}-900`
+      theme.control = `bg-${selector}-700/30`
+      theme.togglePeer = `peer-checked:bg-${selector}-500`
     } else {
-      theme.white = `bg-${selector}-300`;
-      theme.control = `bg-${selector}-700/30`;
-      theme.togglePeer = `peer-checked:bg-${selector}-300`;
+      theme.white = `bg-${selector}-300`
+      theme.control = `bg-${selector}-700/30`
+      theme.togglePeer = `peer-checked:bg-${selector}-300`
     }
-  });
+  })
 
-  const changeBlue = $((): Promise<void> => changeSelector('sky'));
+  const changeBlue = $(() => changeSelector('sky'))
 
-  const changePurple = $((): Promise<void> => changeSelector('purple'));
+  const changePurple = $(() => changeSelector('purple'))
 
-  const changeRed = $((): Promise<void> => changeSelector('red'));
+  const changeRed = $(() => changeSelector('red'))
 
-  const changeEmerald = $((): Promise<void> => changeSelector('emerald'));
+  const changeEmerald = $(() => changeSelector('emerald'))
 
   return {
     isDark: useComputed$(() => theme.isDark),
@@ -56,5 +57,5 @@ export const useTheme = () => {
     changeRed,
     changeEmerald,
     materialTheme
-  };
-};
+  }
+}

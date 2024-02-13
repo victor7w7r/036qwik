@@ -1,13 +1,13 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$, useStyles$ } from '@builder.io/qwik'
 
-import { useTheme } from '~/common/hooks';
+import { useTheme } from '~/common/hooks'
 
-import styles from './toggler.css?inline';
+import styles from './toggler.css?inline'
 
 export const Toggler = component$(() => {
-  const { isDark, toggle, togglePeer } = useTheme();
+  const { isDark, toggle, togglePeer } = useTheme()
 
-  useStyles$(styles);
+  useStyles$(styles)
 
   return (
     <div class='relative'>
@@ -29,5 +29,5 @@ export const Toggler = component$(() => {
         </label>
       </div>
     </div>
-  );
-});
+  )
+})
