@@ -1,5 +1,4 @@
 import { useContext, useComputed$, $ } from '@builder.io/qwik'
-import 'scope-extensions-js'
 
 import { ThemeContext } from '~/common/context'
 import { whiteTheme, darkTheme } from '~/common/models'
