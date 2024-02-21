@@ -20,9 +20,9 @@ export const useServerTimeLoader = routeLoader$(() => ({
 export default component$(() => (
   <DataProvider>
     <ThemeProvider>
-      <main>
-        <Slot />
+      <main class='flex h-screen flex-col gap-8'>
         <Header />
+        <Slot />
       </main>
     </ThemeProvider>
   </DataProvider>

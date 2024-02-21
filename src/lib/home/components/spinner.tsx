@@ -25,16 +25,14 @@ const SVGPathTwo = `
 `
 
 export const Spinner = component$(() => (
-  <div class='flex flex-row justify-center'>
-    <svg
-      role='status'
-      class='mr-2 size-8 animate-spin fill-white text-gray-400/50'
-      viewBox='0 0 100 101'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-    >
-      <path d={SVGPathOne} fill='currentColor' />
-      <path d={SVGPathTwo} fill='currentFill' />
-    </svg>
-  </div>
+  <svg
+    role='status'
+    class='mr-2 size-8 animate-spin fill-white text-gray-400/50'
+    viewBox='0 0 100 101'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path d={SVGPathOne} fill='currentColor' />
+    <path d={SVGPathTwo} fill='currentFill' />
+  </svg>
 ))
